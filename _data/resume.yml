@@ -1,25 +1,25 @@
 # 数据格式可以为 yaml(文件以.yml结尾) 或者json(文件以.json结尾)
 # 如果YAML格式的数据请先检查格式是否有误，可选检查工具 http://www.yamllint.com
 
-title: "简历标题"
-lang: "zh" #语言设置 zh表示中文 en 表示英语
-name: "你的名字"
-jobtitle: "求职意向" #可空不显示
-photo: "assets/img/photo.jpg" #照片可空，不显示
+title: "Kui Xie | CV | kui.xie21@imperial.ac.uk"
+lang: "en" #语言设置 zh表示中文 en 表示英语
+name: "Kui Xie"
+jobtitle: " " #可空不显示
+photo: "" #照片可空，不显示
 
 #联系方式
 contact: #联系方式连接等3~5行
-- text: "youremail@example.com" #文本内容
-  href: 'mailto:youremail@example.com' #链接，无链接则空  
+- text: "kui.xie21@imperial.ac.uk" #文本内容
+  href: 'mailto:kui.xie21@imperial.ac.uk' #链接，无链接则空  
   icon: 'icons/email.svg' #图标 svg文件
-- text: "1234567890"
-  href: 'tel:1234567890'
+- text: "(+44) (0)7529-814-539"
+  href: 'tel:(+44) (0)7529-814-539'
   icon: 'icons/phone.svg'
-- text: "your-website.com"
-  href: 'http://your-website.com'
-  icon: 'icons/web.svg'
-- text: "GitHubID"
-  href: 'https://github.com/NewFuture'
+- text: "Linkedin:kui-xie"
+  href: 'https://linkedin.com/in/kui-xie'
+  icon: 'icons/linkedin.svg'
+- text: "Github:QuinnXie"
+  href: 'https://github.com/QuinnXie'
   icon: "icons/github.svg"
   attr: 'target="_blank"' #新标签页打开
   # - text: "地址"
@@ -28,79 +28,159 @@ contact: #联系方式连接等3~5行
 #main下面是主体内容，类别条数不限
 main: #简历主要内容，
 - type: education #类别为ID
-  name: 教育 #显示名称，空则使用type
+  name: Education #显示名称，空则使用type
   content: #内容基本格式 标题-副标题-日期-详细内容 (都允许空)
-  - title: 大学名称
-    duration: "2011年x月 - 2015年"
-    sub: 地点或学历
-    detail: 专业或者简短说明
-  - title: Your University
-    duration: Aug 2007 - Jun 2011
-    sub: Ut enim ad minim veniam
-    detail: Master Bachelor of Computer Science & Technology.
+  - title: Imperial College London
+    duration: Oct 2021 - Oct 2022
+    sub: London, United Kingdom
+    # detail: MSc in Control and Optimisation  GPA 82.5/100, Distinction (Expected) 
+    detail:
+      md: _data/edu1.md
+  - title: City, University of London
+    duration: Sep 2019-July 2021
+    sub: London, United Kingdom
+    # detail: BEng in Electrical and Electronic Engineering (Avionics and Control) (Joint-Degree)  GPA 89.44/100 (Ranked Top 1% among cohort), First Degree with Honors
+    detail:
+      md: _data/edu2.md
 
-- type: skills
-  # name: "技能"
-  content:
-  - title: 编程语言
-    items: #itmems 可以小块的方式显示
-    - 汉语
-    - 语言2
-    - 语言3
-  - title: Skill Group
-    summary: Consectetur, Adipiscing, Elit
+  - title: Nanjing University of Aeronautics and Astronautics (NUAA)
+    duration: Sep 2017 - July 2019
+    sub: Nanjing, China
+    # detail: BEng in Automation Engineering (Avionics and Control) (Joint-Degree) GPA 90.0/100 (Ranked Top 5% among cohort).  Award Dean's List of Outstanding Academic 
+    detail:
+      md: _data/edu3.md
+
+
+
 
 - type: experience
-  name: 经验
+  name: Research Experience
   content:
-  - title: 职位
-    sub: 某某公司
-    duration: "xxxx年xx月 - yyyy年yy月"
+  - title: Dynamic Optimization in the Julia Programming Language
+    sub: MSc individual research project in Imperial College London
+    duration: May 2022 - Sep 2022
     tags:
-    - 标签
-    summary: 职务或者工作总结(自动折叠)
-    detail: 同时包含 summary和detail在Chrome，Safari(包括IOS)，Android和新版Firefox等会自动折叠，不支持折叠的浏览器和展开后表现一致
-    # open: open
-    #可以设置open默认展开
-  - title: Job Title
-    sub: Your 2nd, Inc.  
-    duration: Apr 2013 - Mar 2016
-    tags: 
-    - tagname
+    #- 标签
     summary: Summary your job or work. (Collapse)
-    detail: Details can be collapsed in Chrome Safari, Firefox, Opera and so on. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-- type: projects
-  name: Projects
-  content:
-  - title: 项目名称
-    duration: xxxx年xx月 - yyyy年yy月
-    detail: 项目和工作介绍，项目总结.
-    sub: 维护者
-  - title: Project Name
-    summary: Projects' introduction or summary
+    # detail: Solved dynamic optimization problem based on direct collocation methods in Julia to find optimal trajectory. Minimized integrated residuals lower to 1e-6 with mesh refinement methods, Minimax Error, Bisection, etc. Provided novel methods, warm start and early termination, reducing algorithm running time up to 40%.
     detail:
-      md: _data/demo.md
-    sub: Creator and maintainer.
+      md: _data/resexp1.md
+    open: open
+    #可以设置open默认展开
+  - title: Research Intern in Autonomous System Lab
+    sub: City, University of London  
+    duration: Jul 2021-Sep 2021
+    tags: 
+    #- tagname
+    summary: Summary your job or work. (Collapse)
+    # detail: Built precise URDF model for the UAV with SolidWorks and Gazebo based on XML format language setting a solid foundation for further simulation in PC; Captured drone position data with Motion Capture Systems. Constructed and controlled quadrotor physically to fly steadily with PID algorithms based on Pixhawk. 
+    detail:
+      md: _data/resexp2.md
+    open: open
+
+  - title: Design, Modelling, Stability Analysis and Control of Hexacopter
+    sub: BEng individual research project in City, University of London
+    duration: Jul 2020-Jun 2021
+    tags: 
+    #- tagname
+    summary: Summary your job or work. (Collapse)
+    # detail: Designed operational framework (CAD model) for drones flying through corridors with retractable brackets. Derived mathematical model and applied adaptive sliding mode controller to aerial manipulators, copying with system gravity centre slide and Inertia moment change successfully; Simulated whole dynamic system in MATLAB and Simulink, verifying the system stability and controller efficiency.
+    detail:
+      md: _data/resexp3.md
+    open: open
+
+  - title: Research Intern in System and Control Research Centre
+    sub: City, University of London
+    duration: Jun 2020 - Sep 2020
+    tags: 
+    #- tagname
+    summary: Summary your job or work. (Collapse)
+    # detail: Implemented nonlinear equations to approximate piecewise linear functions, lowering algorithm complexity; Resulting in maximum efficiency (5%) of the hydroelectric power plant based on an optimal operational framework for the hydroelectric power system.
+    detail:
+      md: _data/resexp4.md
+    open: open
+
+
+- type: experience
+  name: Leadership Experience & Competitions
+  content:
+  - title: The 6th China College Students’ “Internet+” Innovation and Start-up Competition 
+    sub: Team Leader of Final Round Team (National Gold Award)
+    duration: Jun 2020 - Nov 2020
+    tags:
+    #- 标签
+    summary: Summary your job or work. (Collapse)
+    detail: Led team’s efforts to mock the startup of a sonar sales company; Simulation results achieved National Level Competition Gold Award} and demonstrated solid commercial feasibility based on reviewers' feedback.
+    open: open
+    #可以设置open默认展开
+  - title: The 14th National College Students “NXP” Cup Intelligent Car Competition  
+    sub: Team Leader of East China Winning Team
+    duration: Oct 2018 - Aug 2019
+    tags: 
+    #- tagname
+    summary: Summary your job or work. (Collapse)
+    detail: Led a team to design an intelligent three-wheeled vehicle controlled by PID algorithms, successfully making it two-wheeled upright and with long-term stability, awarded Winning Prize in East China Region.Designed printed-circuit boards of electromagnetic sensors by utilizing digital circuit analogue knowledge and lower signal noise generated from sensors by using Kalman filtering.
+    open: open
+
+# - type: projects
+#   name: Projects
+#   content:
+#   - title: 项目名称
+#     duration: xxxx年xx月 - yyyy年yy月
+#     detail: 项目和工作介绍，项目总结.
+#     sub: 维护者
+#   - title: Project Name
+#     summary: Projects' introduction or summary
+#     detail:
+#       md: _data/demo.md
+#     sub: Creator and maintainer.
    #可继续添加更多内容
 
+- type: skills
+  name: "Languages, Skills, Awards & Interests"
+  content:
+  - title: Languages
+    items: 
+    - English (Proficient) 
+    - Mandarin (Native)
+  - title: Technical Skills
+    items: #itmems 可以小块的方式显示
+    - Julia 
+    - MATLAB 
+    - Simulink 
+    - C 
+    - Python 
+    - ROS
+  - title: Awards
+    items: #itmems 可以小块的方式显示
+    - 2018-2019 Outstanding Academic Scholarship, NUAA  
+    - 2018-2019 Outstanding Student Scholarship, NUAA  
+    - 2017-2018 Outstanding Academic Scholarship, NUAA 
+    - 2017-2018 Outstanding Student Scholarship, NUAA 
+  - title: Interests
+    items: #itmems 可以小块的方式显示
+    - Chess 
+    - Hiking 
+    - Cooking 
+
+
 #others 其他简略内容(列表)
-others: #其他列表显示
-- type: others #ID可以为空
-  name: '其他'
-  content: #选择需要的格式
-  - 单行文字
-  - title: "加粗:"
-    text: "列表项二"
-  - title: "兴趣:"
-    items: #单行列表
-    - 睡觉
-    - 吃饭
-    - coding
-  - title: 列表
-    list:
-    - 第一项
-    - 第二项
+# others: #其他列表显示
+# - type: others #ID可以为空
+#   name: '其他'
+#   content: #选择需要的格式
+#   - 单行文字
+#   - title: "加粗:"
+#     text: "列表项二"
+#   - title: "兴趣:"
+#     items: #单行列表
+#     - 睡觉
+#     - 吃饭
+#     - coding
+#   - title: 列表
+#     list:
+#     - 第一项
+#     - 第二项
 #- type: 
 #  name: '其他'
 #  content: #选择需要的格式
@@ -111,10 +191,10 @@ others: #其他列表显示
 footer: #脚注多组
   print: #打印版markdown或者html
   screen:
-  - text: "简历脚注"
+  - text: "CV"
   #   href: '/'
-  - text: "Made with &hearts; by NewFuture"
-    href: "https://github.com/NewFuture/CV/"
+  - text: "Kui Xie"
+    href: "mailto:kui.xie21@imperial.ac.uk"
 
 #页面额外js脚本，如xx统计
 scripts:

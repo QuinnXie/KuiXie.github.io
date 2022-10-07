@@ -1,0 +1,2 @@
+- MSc in **Control and Optimisation**  
+- **GPA**： 82.5/100, **Distinction (Expected)** 
